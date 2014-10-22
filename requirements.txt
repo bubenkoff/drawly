@@ -1,0 +1,5 @@
+Flask-Assets
+Flask-Redis
+Flask-Script
+Flask-Sockets
+gunicorn

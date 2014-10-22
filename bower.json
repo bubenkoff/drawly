@@ -1,0 +1,21 @@
+{
+  "name": "drawly",
+  "version": "0.0.0",
+  "authors": [
+    "Anatoly Bubenkov <bubenkoff@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "uikit": "~2.11.1",
+    "drawingboard.js": "~0.4.4",
+    "sockjs-client": "~0.3.4"
+  }
+}

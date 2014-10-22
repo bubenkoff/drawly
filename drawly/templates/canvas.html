@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="uk-grid">
+    <div class="uk-width-3-4"><div id="canvas"></div></div>
+    <div class="uk-width-1-4">
+        <label for="name">Username</label>
+        <input type="text" id="name" name="name"/>
+        <button id="join">Join</button>
+        <div>Online:</div>
+        <div id="users"></div>
+    </div>
+</div>
+{% endblock %}
