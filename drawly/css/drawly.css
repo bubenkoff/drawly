@@ -2,3 +2,12 @@ div#canvas {
     width: 100%;
     height: 480px;
 }
+
+div#log, div#users {
+    height: 100px;
+    overflow: scroll;
+}
+
+button#leave {
+    display: none;
+}

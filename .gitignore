@@ -4,3 +4,4 @@
 /.env
 .webassets-cache
 static
+*.log
