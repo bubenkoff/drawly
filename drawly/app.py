@@ -14,7 +14,7 @@ socketio = SocketIO(app)
 
 project_path = os.path.dirname(os.path.dirname(__file__))
 
-# Tell flask-assets where to look for our coffeescript and sass files.
+# Tell flask-assets where to look for our files.
 assets.load_path = [
     os.path.join(project_path, 'bower_components'),
     os.path.join(project_path, 'node_modules'),
@@ -45,10 +45,12 @@ assets.register(
 app.register_blueprint(canvas.blueprint)
 
 USERS = set()
+"""Simple session storage."""
 
 
 @socketio.on('message')
 def handle_message(message):
+    """Informational message."""
     emit('message', {
         'message': 'ping'
     })
@@ -56,6 +58,7 @@ def handle_message(message):
 
 @socketio.on('join')
 def handle_join(data):
+    """User joins the room."""
     username = data['username']
     room = 'room'
     join_room(room)
@@ -65,6 +68,7 @@ def handle_join(data):
 
 @socketio.on('leave')
 def handle_leave(data):
+    """User leaves the room."""
     username = data['username']
     room = 'room'
     leave_room(room)
@@ -75,4 +79,5 @@ def handle_leave(data):
 
 @socketio.on('event')
 def handle_event(data):
+    """Event is sent from the user's browser."""
     emit('broadcast_event', data, room='room')
