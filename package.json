@@ -13,6 +13,6 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "postinstall": "bower install"
+    "postinstall": "bower install; python manage.py assets build"
   }
 }
