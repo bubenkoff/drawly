@@ -4,7 +4,7 @@ $(function(){
     var users = $('#users');
     var username = $('#username');
     var canvas = $('#canvas canvas, #canvas');
-    var sock = io.connect('ws://' + window.location.host);
+    var sock = io.connect('ws' + window.location.protocol.slice(-2, -1) + '://' + window.location.host);
 
     $('#join').click(function() {
         // join the room
