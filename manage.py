@@ -12,7 +12,15 @@ manager.add_command('runserver', Server(host="0.0.0.0", port=8000))
 from flask.ext.assets import ManageAssets
 manager = Manager(app)
 
-manager.add_command("assets", ManageAssets(assets))
+
+class CollectStaticAssets(ManageAssets):
+    """Emulate django collectstatic."""
+
+    def run(self, args):
+        super(CollectStaticAssets, self).run(['build'])
+
+
+manager.add_command("collectstatic", CollectStaticAssets(assets))
 
 if __name__ == "__main__":
     manager.run()
