@@ -1,3 +1,0 @@
-[console_scripts]
-manage = manage:manager.run
-

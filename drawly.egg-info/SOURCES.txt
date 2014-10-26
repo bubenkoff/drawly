@@ -1,7 +1,0 @@
-README.rst
-drawly.egg-info/PKG-INFO
-drawly.egg-info/SOURCES.txt
-drawly.egg-info/dependency_links.txt
-drawly.egg-info/entry_points.txt
-drawly.egg-info/requires.txt
-drawly.egg-info/top_level.txt
