@@ -13,6 +13,6 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "postinstall": "bower install; .heroku/venv/bin/python manage.py assets build"
+    "postinstall": "bower install; ls -lla"
   }
 }
