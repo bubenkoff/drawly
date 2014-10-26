@@ -23,7 +23,7 @@ Running the app
 
 ::
 
-    python manage.py
+    python manage.py runserver [-h HOST] [-p PORT]
 
 
 Then open http://localhost:8000 in your browser

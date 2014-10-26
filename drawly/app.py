@@ -1,6 +1,10 @@
 """App entry point."""
 import os.path
 
+from gevent.monkey import patch_all
+
+patch_all()
+
 from flask import Flask
 from flask.ext.assets import Environment, Bundle
 from flask.ext.socketio import SocketIO, emit, join_room, leave_room

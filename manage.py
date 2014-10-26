@@ -1,16 +1,20 @@
 """Management entry point script."""
 from flask.ext.script import Manager, Server
+from flask.ext.assets import ManageAssets
 
-from drawly.app import app, assets
+from drawly.app import app, assets, socketio
 
 manager = Manager(app)
 
 app.config['DEBUG'] = True
 
-manager.add_command('runserver', Server(host="0.0.0.0", port=8000))
 
-from flask.ext.assets import ManageAssets
-manager = Manager(app)
+class Runserver(Server):
+
+    def __call__(self, app, host, port, **kwargs):
+        socketio.run(app, host=host, port=port)
+
+manager.add_command('runserver', Runserver(app))
 
 
 class CollectStaticAssets(ManageAssets):
