@@ -2,6 +2,7 @@
 /node_modules
 *.pyc
 /.env
+/env
 .webassets-cache
 static
 *.log
