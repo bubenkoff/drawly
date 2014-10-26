@@ -12,5 +12,7 @@
   },
   "author": "",
   "license": "ISC",
-  "postinstall": "bower install"
+  "scripts": {
+    "postinstall": "bower install"
+  }
 }
