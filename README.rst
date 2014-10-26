@@ -3,6 +3,8 @@ Drawly
 
 Simple collaborative drawing demo using flask-socketio
 
+Demo app is served on `https://drawly.herokuapp.com/ <https://drawly.herokuapp.com/>`_
+
 
 Installation
 ------------
